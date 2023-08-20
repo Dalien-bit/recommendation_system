@@ -223,7 +223,7 @@ Activities such as hovering and visiting product page represents the willingness
 2. For the backend I have used flask. Refer to [app](app.py).
 
 Thank you for reading thus far.
-You can see the app live in action in the [video]()
+You can see the app live in action in the [video](https://drive.google.com/file/d/1yeicD9mu1_K0iCl-yO7c0DO4p_dmhdvI/view?usp=sharing)
 
 To run the app on your device
 1. pip install pandas numpy sklearn 
