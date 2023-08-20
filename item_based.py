@@ -41,7 +41,7 @@ neighbors = []  # store neighbors in this list
 averages = []  # each item's average rating
 deviations = []  # each item's deviation
 
-
+print("parsing products...")
 for i in range(M):
     # find the K closest items to item i
     users_i = movie2user[i]
@@ -89,11 +89,6 @@ for i in range(M):
     # store the neighbors
     neighbors.append(sl)
 
-    # print out useful things
-    if i % 1 == 0:
-        print(i)
-
-
 # using neighbors, calculate train and test MSE
 
 def predict(i, u):
@@ -133,7 +128,9 @@ for (u, m), target in usermovie2rating.items():
     train_predictions.append(prediction)
     train_targets.append(target)
 
-print(temp_user)
+print("For debug/testing purpose you use the user with a uid of: " + str(temp_user))
+print("Once site is live you can go to the {referred port in the terminal}/home/" + str(temp_user) + " to see recommendation for the user")
+
 
 test_predictions = []
 test_targets = []

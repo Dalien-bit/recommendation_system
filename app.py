@@ -9,7 +9,7 @@ rating_database = pd.read_csv('./data/small_rating.csv')
 
 @app.route('/')
 def root():
-    redirect(url_for('signin'))
+    return render_template('index.html')
 
 
 @app.route('/home/<int:uid>')
@@ -27,7 +27,6 @@ def moviePage(id):
     movie['year'] = selected_row.movie_year.values[0]
     sim_movies = getSimilarMatrix(id)
     return render_template('movie.html', data=movie, similar=sim_movies)
-@app.route('/rate/<int:id>/<int:rating>', method=['POST'])
 
 
 
